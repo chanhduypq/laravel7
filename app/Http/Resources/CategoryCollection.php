@@ -7,12 +7,6 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 class CategoryCollection extends ResourceCollection
 {
     /**
-     * The resource that this resource collects.
-     *
-     * @var string
-     */
-    public $collects = 'App\Http\Resources\Course';
-    /**
      * Transform the resource collection into an array.
      *
      * @param  \Illuminate\Http\Request  $request

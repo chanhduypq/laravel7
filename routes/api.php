@@ -1,8 +1,5 @@
 <?php 
 
-//use Illuminate\Http\Request;
-//use Illuminate\Support\Facades\Route;
-
 use App\Http\Resources\CategoryCollection;
 use App\Models\Category;
 
@@ -17,10 +14,6 @@ use App\Models\Category;
 |
 */
 
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
-
-Route::middleware('auth:sanctum')->get('/categories', function () {
+Route::get('/categories', function () {
     return new CategoryCollection(Category::paginate(2));
 });
